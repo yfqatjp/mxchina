@@ -21,7 +21,8 @@ class Field
     private $optionTable;
     private $relation;
     private $roles;
-
+    private $tabindex;
+    
     public function __construct ($name, $label, $type, $required, $validation, $options, $multilingual, $unique, $comment, $active, $editor, $optionTable, $relation, $roles, $notice = "")
     {
         $this->name = $name;
@@ -138,4 +139,22 @@ class Field
     {
         $this->notice = $notice;
     }
+    /* @jeff 包车服务  start */
+    function setActive($active)
+    {
+    	$this->active = $active;
+    }
+    function setType($type)
+    {
+    	$this->type = $type;
+    }
+    function setTabindex($tabindex)
+    {
+    	$this->tabindex = $tabindex;
+    }
+    function getTabindex()
+    {
+    	return $this->tabindex;
+    }
+    /* @jeff 包车服务  end */
 }
